@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-subimt & pop-up</title>
+</head>
+
+<body>
+    <label>Name: </label><br>
+    <input id="name" type="text" ><br><br>
+    <label>Number: </label><br>
+    <input id="num" type="text" ><br><br>
+    <label>E-mail: </label><br>
+    <input id="mail" type="email"><br><br>
+    <input type="checkbox" id="check"><span>Check input field</span><br><br>
+    <button onclick="info()">Submit</button><br><br>
+    <p id="na"></p>
+    <p id="mo"></p>
+    <p id="em"></p>
+
+    <script>
+        function info() {
+            var a = document.getElementById('name').value;
+            var b = document.getElementById('num').value;
+            var c = document.getElementById('mail').value;
+            var d = document.getElementById('check').checked;
+            document.getElementById('na').innerHTML = 'Name' + ': ' + a;
+            document.getElementById('mo').innerHTML = 'Mob No.' + ': ' + b;
+            document.getElementById('em').innerHTML = 'E-mail' + ': ' + c;
+
+
+            if (a === '' || b === '' || c === '' || !d) {
+                window.alert('invalid input')
+            } else {
+                window.alert('success')
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
